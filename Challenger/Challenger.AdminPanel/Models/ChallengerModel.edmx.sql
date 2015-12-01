@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 12/01/2015 16:42:09
+-- Date Created: 12/01/2015 17:15:08
 -- Generated from EDMX file: C:\Users\Sasha\Desktop\DelphiInternship\Challenger\Challenger.AdminPanel\Models\ChallengerModel.edmx
 -- --------------------------------------------------
 
@@ -22,6 +22,9 @@ GO
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[UserSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[UserSet];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables

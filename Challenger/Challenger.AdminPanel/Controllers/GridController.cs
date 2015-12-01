@@ -14,16 +14,9 @@ namespace Challenger.AdminPanel.Controllers
     {
        ChallengerModelContainer entities= new ChallengerModelContainer();
 	
-		 public ActionResult Editing()
-		{ 
-			
-        
-            return View();
-        }
 		public ActionResult Editing_Read([DataSourceRequest] DataSourceRequest request)
 				{
-	//		entities.UserSet.Add( new User());
-	//		entities.SaveChanges();
+			
             return Json(entities.UserSet.ToDataSourceResult(request));
         }
 
@@ -62,7 +55,6 @@ namespace Challenger.AdminPanel.Controllers
                 entities.SaveChanges();
             } catch (Exception e)
             { }
-                 //   a.Update(product);
                 }
             }
 
@@ -82,7 +74,6 @@ namespace Challenger.AdminPanel.Controllers
                 entities.SaveChanges();
             } catch (Exception e)
             { }
-             //       a.Destroy(product);
                 }
             }
 
