@@ -4,9 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
+    <link href="@Url.Content("~/Content/kendo/2015.3.1111/kendo.dataviz.default.min.css")" rel="stylesheet" type="text/css" />
+ 
+    @Styles.Render( "~/Content/css" )
+    @Scripts.Render( "~/bundles/jquery" )
+   
+   
+   
+	<link href="@Url.Content("~/Content/kendo/2015.3.1111/kendo.common-material.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2015.3.1111/kendo.mobile.all.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2015.3.1111/kendo.dataviz.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2015.3.1111/kendo.material.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2015.3.1111/kendo.dataviz.material.min.css")" rel="stylesheet" type="text/css" />
+	<script src="@Url.Content("~/Scripts/kendo/2015.3.1111/jquery.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2015.3.1111/jszip.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2015.3.1111/kendo.all.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2015.3.1111/kendo.aspnetmvc.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,6 +38,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink( "Users", "Users", "Home" )</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -37,7 +52,7 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
+  
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
